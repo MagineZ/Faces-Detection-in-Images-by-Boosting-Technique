@@ -43,3 +43,19 @@ classifiers among the pool of weak classifiers in increasing order.
 
 With T increase, the error of weak classifiers in pool arises and approach to 0.5, because the
 Adaboost algorithm put more weight on missclassified samples.
+
+The Adaboost histograms of the positive and negative populations over the F(x) axis and the three
+corresponding ROC curves for T=10,50,100.
+
+![T_10]()
+![T_50]()
+![T_100]()
+
+As T increase, the result final filter F(x) can better seperate positive and negative population. And
+the corner of the ROC curve move to left top more.
+
+##Test images
+At the end, the final filter derived from T100 adaboost and one image taken at the class was tested.
+
+![Test_image]()
+
