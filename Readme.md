@@ -16,5 +16,30 @@ The hitogram of filterd result of one weak classifer looks like following:
 ![Histogram_of_Weak_Classifiers]()
 
 The filtered image values are calculated by image integral techniques.
-Each weak classifier will tweak the threshold/decision boundary by the average of the 50th percentile filtered values of each face and nonface groups.
+Each weak classifier will tweak the threshold(decision boundary) by the average of the 50th percentile filtered values of each face and nonface groups.
 
+## AdaBoosting
+The Adaptive Boost algorithm was implemented, which can iterative select a weak classifier from the classifier source and then combine them into a weighted sum that represents the final strong classifier. The “adaptive“ way we chose a weak classifier is that, in each iteration we put more focus on data points which are misclassified in previous iteration, tweak the decision boundary between the face and non-face set for each classifier, and then select the classifier which has the highest accuracy into our building strong classifier.
+The following is further explaination from course STAT231 by Professor Song-Chun Zhu.
+![AdaBosst_1]()
+![AdaBosst_2]()
+![AdaBosst_3]()
+![AdaBosst_4]()
+![AdaBosst_5]()
+![AdaBosst_6]()
+![AdaBosst_7]()
+![AdaBosst_8]()
+![AdaBosst_9]()
+![AdaBosst_10]()
+![AdaBosst_11]()
+
+After implement the Adaboost algorithm to boost the weak classifiers, the first ten classifiers selected are:
+![First_Ten_Claasifiers]()
+
+The following is the curve of errors, at steps T=0, 10, 50, 100 respectively, of top 1000 weak
+classifiers among the pool of weak classifiers in increasing order.
+
+![T_RUN]()
+
+With T increase, the error of weak classifiers in pool arises and approach to 0.5, because the
+Adaboost algorithm put more weight on missclassified samples.
