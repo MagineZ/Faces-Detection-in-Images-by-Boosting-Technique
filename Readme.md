@@ -34,7 +34,7 @@ The following is further explaination from course STAT231 by Professor Song-Chun
 ![AdaBosst_11]()
 
 After implement the Adaboost algorithm to boost the weak classifiers, the first ten classifiers selected are:
-![First_Ten_Claasifiers]()
+![First_Ten_Claasifiers](https://github.com/MagineZ/Faces-Detection-in-Images-by-Boosting-Technique/blob/master/pictures/First_Ten_Classifier.png)
 
 The following is the curve of errors, at steps T=0, 10, 50, 100 respectively, of top 1000 weak
 classifiers among the pool of weak classifiers in increasing order.
